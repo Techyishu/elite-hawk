@@ -40,14 +40,14 @@ export default function StatCounter({ value, label, suffix = '', className = '' 
   }, [value, hasAnimated])
 
   return (
-    <div ref={ref} className={`text-center ${className}`}>
+    <div ref={ref} className={`${className}`}>
       <div
-        className="text-4xl md:text-5xl font-bold text-gold"
+        className="text-3xl md:text-4xl font-bold text-gold leading-none"
         style={{ fontFamily: 'var(--font-heading)' }}
       >
         {count.toLocaleString()}{suffix}
       </div>
-      <div className="text-slate text-sm mt-1 font-medium">{label}</div>
+      <div className="text-slate text-xs mt-1.5 tracking-wider uppercase" style={{ fontFamily: 'var(--font-body)' }}>{label}</div>
     </div>
   )
 }
